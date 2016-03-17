@@ -65,7 +65,8 @@ function initAutocomplete() {
 
 
 $(document).ready(function() {
-  $.get("https://maps.googleapis.com/maps/api/js?key=AIzaSyBndGBaNKCgFhrrwhVGk271BWMNVSCn9Us&libraries=places&callback=" + initAutocomplete(), function() {
+  $.getScript("https://maps.googleapis.com/maps/api/js?key=AIzaSyBndGBaNKCgFhrrwhVGk271BWMNVSCn9Us&libraries=places", function() {
+    initAutocomplete();
     console.log("hey there");
   });
 
